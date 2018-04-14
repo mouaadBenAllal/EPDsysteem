@@ -1,0 +1,29 @@
+﻿<Page x:Class="EpdFirefly.Views.Anamnese.AnamneseOverzicht"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:EpdFirefly.Views.Anamnese"
+      mc:Ignorable="d"
+      d:DesignHeight="631" d:DesignWidth="1000"
+      Title="MetingenOverzicht" Background="#dcecf0" Name="overzichtPage">
+    <Grid>
+        <Separator Margin="0,-219,0,223" />
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,133,362,0"
+                      RenderTransformOrigin="0.474,0.523" HorizontalAlignment="Right" Width="592" Height="379"
+                      VerticalAlignment="Top">
+            <StackPanel Name="Patientstack">
+                <TextBlock x:Name="patientNaamTxt" FontSize="24" />
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="CreateAnamneseBtn" Content=" Nieuwe Anamnese" HorizontalAlignment="Left" Margin="10,37,0,0"
+                VerticalAlignment="Top" Width="156" />
+        <TextBlock HorizontalAlignment="Left" Margin="376,22,0,0" TextWrapping="Wrap" Text="Overzicht anamnese"
+                   VerticalAlignment="Top" Height="51" Width="310" FontSize="34" />
+        <Button Name="deletebtn" Background="DarkRed" BorderBrush="DarkRed" Content="Delete"  Margin="10,561,861,27" Height="Auto"/>
+        <Button Content="Update" Name="updateBtn" Background="Orange" HorizontalAlignment="Left" Margin="25,544,0,0" VerticalAlignment="Top" Width="147" Height="32" Visibility="Hidden"/>
+
+    </Grid>
+
+</Page>

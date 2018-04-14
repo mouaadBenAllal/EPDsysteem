@@ -1,0 +1,22 @@
+﻿<Window x:Class="EpdFirefly.Views.Metingen.CreatePijnMeting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EpdFirefly.Views.Metingen"
+        mc:Ignorable="d"
+        Title="Nieuwe Pijnscore" Height="400" Width="600" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="createPijnMetingGrid">
+        <Image Margin="0,0,0,124" Source="/images/Image3.png" Stretch="Fill" />
+        <ComboBox x:Name="pijnscore" HorizontalAlignment="Left" Margin="244,273,0,0" VerticalAlignment="Top" Width="95">
+            <ComboBoxItem Tag="0" IsSelected="True">0</ComboBoxItem>
+            <ComboBoxItem Tag="1" IsSelected="False">1 - 3</ComboBoxItem>
+            <ComboBoxItem Tag="2" IsSelected="False">4 - 6</ComboBoxItem>
+            <ComboBoxItem Tag="3" IsSelected="False">7 - 9</ComboBoxItem>
+            <ComboBoxItem Tag="4" IsSelected="False">10</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="SavePijnScore" Content="Opslaan" HorizontalAlignment="Left" Margin="10,315,0,0"
+                VerticalAlignment="Top" Width="86" />
+
+    </Grid>
+</Window>

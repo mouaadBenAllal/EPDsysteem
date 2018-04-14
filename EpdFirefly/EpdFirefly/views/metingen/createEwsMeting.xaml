@@ -1,0 +1,82 @@
+﻿<Window x:Name="createEwsWindow" x:Class="EpdFirefly.Views.Metingen.CreateEwsMeting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EpdFirefly.Views.Metingen"
+        mc:Ignorable="d"
+        Title="Nieuwe Ews Meting" Height="500" Width="400" Background="#2e3137" WindowStartupLocation="CenterScreen">
+    <Border Background="#dcecf0" CornerRadius="20" Margin="20">
+        <Grid x:Name="createEwsGrid">
+            <ComboBox x:Name="ademfrequentie" HorizontalAlignment="Left" Margin="187,19,0,0" VerticalAlignment="Top"
+                      Width="120">
+                <ComboBoxItem Tag="1" IsSelected="True">Kleinder dan 9</ComboBoxItem>
+                <ComboBoxItem Tag="3" IsSelected="False">9 - 14</ComboBoxItem>
+                <ComboBoxItem Tag="4" IsSelected="False">15 - 20</ComboBoxItem>
+                <ComboBoxItem Tag="5" IsSelected="False">21 - 30</ComboBoxItem>
+                <ComboBoxItem Tag="6" IsSelected="False">Groter dan 30</ComboBoxItem>
+            </ComboBox>
+
+            <Label Content="Ademfrquentie" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top"
+                   RenderTransformOrigin="0.118,1.692" />
+            <ComboBox x:Name="hartfrequentie" HorizontalAlignment="Left" Margin="187,69,0,0" VerticalAlignment="Top"
+                      Width="120">
+                <ComboBoxItem Tag="1" IsSelected="True">Kleinder dan 40</ComboBoxItem>
+                <ComboBoxItem Tag="2" IsSelected="False">40 - 50</ComboBoxItem>
+                <ComboBoxItem Tag="3" IsSelected="False">51 - 100</ComboBoxItem>
+                <ComboBoxItem Tag="4" IsSelected="False">101 - 110</ComboBoxItem>
+                <ComboBoxItem Tag="5" IsSelected="False">111 - 130</ComboBoxItem>
+                <ComboBoxItem Tag="6" IsSelected="False">Groter dan 130</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Hartfrequentie&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,69,0,0"
+                   VerticalAlignment="Top" RenderTransformOrigin="0.118,1.692" Height="28" />
+            <ComboBox x:Name="systolische_bloeddruk" HorizontalAlignment="Left" Margin="187,119,0,0"
+                      VerticalAlignment="Top" Width="120">
+                <ComboBoxItem Tag="0" IsSelected="True">Kleiner dan 70</ComboBoxItem>
+                <ComboBoxItem Tag="1" IsSelected="False">70 - 80</ComboBoxItem>
+                <ComboBoxItem Tag="2" IsSelected="False">81 - 100</ComboBoxItem>
+                <ComboBoxItem Tag="3" IsSelected="False">101 - 180</ComboBoxItem>
+                <ComboBoxItem Tag="4" IsSelected="False">180 - 200</ComboBoxItem>
+                <ComboBoxItem Tag="5" IsSelected="False">Groter dan 200</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Systolische bloeddruk&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="10,119,0,0"
+                   VerticalAlignment="Top" RenderTransformOrigin="0.118,1.692" Height="26" />
+            <ComboBox x:Name="bewustzijn" HorizontalAlignment="Left" Margin="187,169,0,0" VerticalAlignment="Top"
+                      Width="120">
+                <ComboBoxItem Tag="2" IsSelected="True">Acute agitatie</ComboBoxItem>
+                <ComboBoxItem Tag="20" IsSelected="False">Verwardheid</ComboBoxItem>
+                <ComboBoxItem Tag="3" IsSelected="False">Alert</ComboBoxItem>
+                <ComboBoxItem Tag="4" IsSelected="False">Reactie, aanspreken</ComboBoxItem>
+                <ComboBoxItem Tag="5" IsSelected="False">Reactie op pijn</ComboBoxItem>
+                <ComboBoxItem Tag="6" IsSelected="False">Niet aanspreekbaar</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Bewustzijn&#xA;" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top"
+                   RenderTransformOrigin="0.118,1.692" Height="26" />
+            <ComboBox x:Name="temperatuur" HorizontalAlignment="Left" Margin="187,217,0,0" VerticalAlignment="Top"
+                      Width="120">
+                <ComboBoxItem Tag="1" IsSelected="True">Kleiner dan 35.1</ComboBoxItem>
+                <ComboBoxItem Tag="2" IsSelected="False">35.1 - 36.5</ComboBoxItem>
+                <ComboBoxItem Tag="3" IsSelected="False">36.6 - 37.5</ComboBoxItem>
+                <ComboBoxItem Tag="4" IsSelected="False">37.6 - 39.0</ComboBoxItem>
+                <ComboBoxItem Tag="5" IsSelected="False">Groter dan 39.0</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Temperatuur&#xA;" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top"
+                   RenderTransformOrigin="0.118,1.692" Height="26" />
+            <Label Content="Saturatie lager dan 90%&#xA;" HorizontalAlignment="Left" Margin="10,274,0,0"
+                   VerticalAlignment="Top" RenderTransformOrigin="0.118,1.692" Height="26" />
+            <Label Content="Pijnscore groter dan 7" HorizontalAlignment="Left" Margin="10,305,0,0"
+                   VerticalAlignment="Top" RenderTransformOrigin="0.118,1.692" Height="26" />
+            <Label Content="Ongerust over patient? " HorizontalAlignment="Left" Margin="10,336,0,0"
+                   VerticalAlignment="Top" RenderTransformOrigin="0.118,1.692" Height="26" />
+            <CheckBox x:Name="saturatie_lager_90" IsChecked="false" Content="Saturatie &lt;90%"
+                      HorizontalAlignment="Left" Margin="187,282,0,0" VerticalAlignment="Top" />
+            <CheckBox x:Name="pijnscore_grote_7" IsChecked="false" Content="Pijnscore &gt;7" HorizontalAlignment="Left"
+                      Margin="187,313,0,0" VerticalAlignment="Top" />
+            <CheckBox x:Name="ongerustheid" IsChecked="false" Content="Ongerustheid" HorizontalAlignment="Left"
+                      Margin="187,339,0,0" VerticalAlignment="Top" />
+            <Button Name="SaveEwsMeting" Content="Opslaan" HorizontalAlignment="Left" Margin="17,377,0,0"
+                    VerticalAlignment="Top" Width="83" />
+        </Grid>
+    </Border>
+
+</Window>

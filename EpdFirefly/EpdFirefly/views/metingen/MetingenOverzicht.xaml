@@ -1,0 +1,46 @@
+﻿<Page x:Class="EpdFirefly.Views.Metingen.MetingenOverzicht"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:EpdFirefly.Views.Metingen"
+      mc:Ignorable="d"
+      d:DesignHeight="631" d:DesignWidth="1000"
+      Title="MetingenOverzicht">
+
+    <Grid Margin="0,10,0,0">
+        <DataGrid HorizontalAlignment="Left" Background="#dcecf0" Height="621" VerticalAlignment="Top" Width="990" Margin="10,0,0,0" />
+        <Button Name="Ews" Content="Ews Meting" HorizontalAlignment="Left" Margin="25,544,0,0" VerticalAlignment="Top"
+                Width="148" />
+        <Button Name="Pijnscore" Content="Pijnscore" HorizontalAlignment="Left" Margin="223,544,0,0"
+                VerticalAlignment="Top" Width="107" />
+        <Button Name="SNAQ" Content="SNAQ" HorizontalAlignment="Left" Margin="373,544,0,0" VerticalAlignment="Top"
+                Width="107" />
+        <Button Name="DOS" Content="DOS-score" HorizontalAlignment="Left" Margin="517,544,0,0" VerticalAlignment="Top"
+                Width="107" />
+        <Button Name="BradenDecubitus" Content="Braden decubitus" HorizontalAlignment="Left" Margin="667,544,0,0"
+                VerticalAlignment="Top" Width="148" />
+        <Button Name="DecubitusScore" Content="Decubitus score" HorizontalAlignment="Left" Margin="842,544,0,0"
+                VerticalAlignment="Top" Width="148" />
+        <DataGrid x:Name="metingenDataGrid" Background="#dcecf0" HorizontalAlignment="Left" Height="521" Margin="10,0,0,0"
+                  VerticalAlignment="Top" Width="990" IsReadOnly="True">
+
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="DataGridCell.IsSelected" Value="True">
+                            <Setter Property="Background" Value="#008080" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="#dcecf0"></Setter>
+                    <EventSetter x:Name="dataGridEventSetter" Event="MouseDoubleClick" Handler="DataGridRowHandler" />
+                </Style>
+            </DataGrid.ItemContainerStyle>
+        </DataGrid>
+    </Grid>
+</Page>

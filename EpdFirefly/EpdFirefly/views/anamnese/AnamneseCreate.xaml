@@ -1,0 +1,726 @@
+﻿<Page x:Class="EpdFirefly.Views.Anamnese.AnamneseCreate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:EpdFirefly.Views.Anamnese"
+      mc:Ignorable="d" d:DesignWidth="1178"
+      Title="AnamneseCreate" Height="4427">
+    <ScrollViewer VerticalScrollBarVisibility="Visible" Margin="0,0,0,-4426">
+        <StackPanel x:Name="stackpanel" Height="17078">
+            <Grid x:Name="grid1" Margin="10" Background="#dcecf0" Height="612">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="79" />
+                    <ColumnDefinition Width="188" />
+                    <ColumnDefinition Width="233*" />
+                    <ColumnDefinition Width="204*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="6" Margin="1,13.5,11,7.5" Content="Zorgvrager:" Grid.Column="1" />
+                <TextBox x:Name="zorgvrager" Grid.Row="6" Grid.Column="1" Margin="187,5.5,0,7.5" Grid.ColumnSpan="2" />
+                <Label Grid.Row="7" Content="Ingevuld door:" Margin="1,12.5,11,6.5" Grid.Column="1" />
+                <TextBox x:Name="ingevuld_door" Grid.Row="7" Grid.Column="1" Margin="187,4.5,2,6.5" Grid.ColumnSpan="2" />
+                <TextBlock HorizontalAlignment="Left" Margin="1,13.5,0,0" Grid.Row="2" TextWrapping="Wrap"
+                           Text="Anamneselijst van Gordon" VerticalAlignment="Top" Width="372"
+                           FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="28"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold" />
+                <Label Grid.Row="8" Content="Akkoord zorgvrager" Margin="0,11,12,9.5" Grid.Column="1" />
+                <TextBox x:Name="akkoord_zorgvrager" Grid.Row="8" Grid.Column="2" Margin="0,5,2,10" />
+                <Label Grid.Row="9" Content="Handtekening zorgvrager:" Margin="2,8.5,10,10.5" Grid.Column="1" />
+                <Label Grid.Row="10" Content="EVV:" Margin="1,9.5,7,13.5" Grid.Column="1" />
+                <TextBox x:Name="EVV" Grid.Row="10" Margin="186,9,0,6" Grid.Column="1" Grid.ColumnSpan="2" />
+                <TextBox x:Name="handtekening_zorgvrager" Grid.Row="8" Grid.Column="2" Margin="0,47,0,11"
+                         Grid.RowSpan="2" />
+                <TextBlock HorizontalAlignment="Left" Margin="1,12.5,0,0" Grid.Row="3" TextWrapping="Wrap"
+                           VerticalAlignment="Top" Grid.ColumnSpan="2" Height="136" Grid.RowSpan="4" Width="516"
+                           Foreground="#FF444647" FontWeight="Bold" Grid.Column="1">
+                    <Run Text="Onderstaand formulier is een voorbeeld van een anamneselijst gebaseerd op Gordon." />
+                    <LineBreak />
+                    <Run
+                        Text="Beschrijf in het formulier per onderdeel hoe de zorgvrager ieder onderdeel uitvoert en hoe zelfstandig de zorgvrager is." />
+                    <LineBreak /><Run Text="Kies daarbij bijvoorbeeld uit de volgende mogelijkheden:" /><LineBreak />
+                    <Run Text="• De zorgvrager functioneert zelfstandig." /><LineBreak />
+                    <Run Text="• De zorgvrager heeft hierbij begeleiding van een verpleegkundige nodig." />
+                    <LineBreak /><Run Text="• De zorgvrager heeft hierbij begeleiding van familie/mantelzorg nodig." />
+                    <LineBreak /><Run Text="• Deze activiteit moet volledig van de zorgvrager worden overgenomen." />
+                </TextBlock>
+                <Button Name="gordon_saveBtn" Content="Opslaan" Grid.Column="2" HorizontalAlignment="Left"
+                        Margin="0,9.5,0,0" Grid.Row="12" VerticalAlignment="Top" Width="182" Height="54" />
+                <TextBox x:Name="patient_id" Grid.Column="3" HorizontalAlignment="Left" Height="24" Margin="227,17,0,0"
+                         TextWrapping="Wrap" VerticalAlignment="Top" Width="24" Grid.Row="2" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="79" />
+                    <ColumnDefinition Width="247" />
+                    <ColumnDefinition Width="473*" />
+                    <ColumnDefinition Width="343*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="5" Margin="10,10,2,11" Content="Gezondheid in het algemeen:" Grid.Column="1" />
+                <TextBox x:Name="gezondheid_algemeen" Grid.Row="5" Grid.Column="2" Margin="8,2,2.5,11" />
+                <Label Grid.Row="6" Content="Belangrijke dingen om gezond te blijven:" Margin="10,9,10,10"
+                       Grid.Column="1" />
+                <TextBox x:Name="belangrijk_gezond" Grid.Row="6" Grid.Column="2" Margin="8,1,2.5,10" />
+                <Label Grid.Row="7" Content="Opvolgen van voorschriften:" Margin="10,8,2,11" Grid.Column="1" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold">
+                    <Run Text="1 " /><Run Text="Gezondheidsbeleving en instandhouding" />
+                </TextBlock>
+                <Label Grid.Row="8" Content="Belangrijk voor verblijf:" Margin="10,11,2,10" Grid.Column="1" />
+                <TextBox x:Name="belangrijk_verblijf" Grid.Row="8" Grid.Column="2" Margin="8,5,0.5,10" />
+                <TextBox x:Name="opvolgen_voorschrift" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top"
+                         Height="38" Width="462" Grid.Column="2" Margin="8,0,0,0" />
+                <Button Content="Opslaan" Grid.Column="2" HorizontalAlignment="Left" Margin="8,0,0,0" Grid.Row="10"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31" />
+                    <ColumnDefinition Width="162" />
+                    <ColumnDefinition Width="82*" />
+                    <ColumnDefinition Width="52*" />
+
+
+                    <ColumnDefinition Width="103*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="5" Margin="10,10.5,2,10.5" Content="Normaal dagelijks eten:" Grid.Column="1" />
+                <TextBox x:Name="dagelijks_eten" Grid.Row="5" Grid.Column="2" Margin="8,2.5,0,10.5"
+                         HorizontalAlignment="Left" Width="317" />
+                <Label Grid.Row="6" Content="Normaal dagelijks drinken:" Margin="10,9.5,2,9.5" Grid.Column="1" />
+                <TextBox x:Name="dagelijks_drinken" Grid.Row="6" Grid.Column="2" Margin="8,1.5,0,9.5"
+                         HorizontalAlignment="Left" Width="317" />
+                <Label Grid.Row="7" Content="Gewichtsverlies:" Margin="10,8.5,2,10.5" Grid.Column="1" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="3" Grid.Column="1" FontWeight="Bold">
+                    <Run Text="2 " /><Run Text="Voedings- en stofwisselingpatroon" />
+                </TextBlock>
+                <Label Grid.Row="8" Content="Gewichtstoename:" Margin="10,11.5,2,9.5" Grid.Column="1" />
+                <TextBox x:Name="gewichtstoename" Grid.Row="8" Grid.Column="2" Margin="8,5.5,0,9.5"
+                         HorizontalAlignment="Left" Width="317" />
+                <TextBox x:Name="gewichtverlies" Grid.Row="7" VerticalAlignment="Top" Height="38" Grid.Column="2"
+                         Margin="8,0.5,0,0" HorizontalAlignment="Left" Width="310" />
+                <Button Content="Opslaan" Grid.Column="2" HorizontalAlignment="Left" Margin="0,15.5,0,0" Grid.Row="11"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+                <Label Grid.Row="9" Content="Dieet:" Margin="10,20.5,2,0.5" Grid.Column="1" />
+                <TextBox x:Name="dieet" Grid.Row="9" Grid.Column="2" Margin="8,10.5,0,4.5" HorizontalAlignment="Left"
+                         Width="317" />
+                <Label Grid.Row="5" Content="Voorkeur" Margin="33,10.5,10,10.5" Grid.Column="3" />
+                <Label Grid.Row="6" Content="Afkeur:" Margin="33,21.5,10,48.5" Grid.Column="3"
+                       RenderTransformOrigin="0.05,0.571" Grid.RowSpan="2" />
+                <Label Grid.Row="7" Content="Problemen met eten, &#xD;&#xA;slikklachten:" Margin="33,6.5,10,19.5"
+                       Grid.Column="3" Grid.RowSpan="2" />
+                <Label Grid.Row="8" Content="Problemen met gebit:" Margin="33,11.5,10,7.5" Grid.Column="3" />
+                <Label Grid.Row="9" Content="Huidproblemen:" Margin="33,22.5,10,47.5" Grid.Column="3" Grid.RowSpan="2" />
+                <Separator Grid.Column="2" HorizontalAlignment="Left" Height="10" Margin="127,34,0,0" Grid.Row="7"
+                           VerticalAlignment="Top" Width="306" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="90" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+                <TextBox x:Name="voorkeur" Grid.Row="5" Grid.Column="4" Margin="10,2.5,46,10.5" />
+                <TextBox x:Name="afkeur" Grid.Row="6" Grid.Column="4" Margin="10,1.5,46,9.5" />
+                <TextBox x:Name="problemen_gebit" Grid.Row="8" Grid.Column="4" Margin="10,5.5,46,9.5" />
+                <TextBox x:Name="problemen_eten_slikklachten" Grid.Row="7" VerticalAlignment="Top" Height="38"
+                         Grid.Column="4" Margin="10,0.5,46,0" />
+                <TextBox x:Name="huidproblemen" Grid.Row="9" Grid.Column="4" Margin="10,10.5,46,4.5" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31" />
+                    <ColumnDefinition Width="162" />
+                    <ColumnDefinition Width="82*" />
+                    <ColumnDefinition Width="52*" />
+
+
+                    <ColumnDefinition Width="103*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="5" Margin="10,10.5,2,10.5" Content="Mictiepatroon:" Grid.Column="1" />
+                <TextBox x:Name="mictiepatroon" Grid.Row="5" Grid.Column="2" Margin="8,2.5,0,10.5"
+                         HorizontalAlignment="Left" Width="317" />
+                <Label Grid.Row="6" Content="Continentie:" Margin="10,9.5,2,9.5" Grid.Column="1" />
+                <TextBox x:Name="continentie_mictiepatroon" Grid.Row="6" Grid.Column="2" Margin="8,1.5,0,9.5"
+                         HorizontalAlignment="Left" Width="317" />
+                <Label Grid.Row="7" Content="Defecatiepatroon:" Margin="10,8.5,2,10.5" Grid.Column="1" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Width="597"
+                           FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Grid.ColumnSpan="3"
+                           Grid.Column="1" Margin="0,0,0,13" FontWeight="Bold">
+                    <Run Text="3 " /><Run Text="Uitscheidingspatroon" />
+                </TextBlock>
+                <Label Grid.Row="8" Content="Continentie:" Margin="10,11.5,2,9.5" Grid.Column="1" />
+                <TextBox x:Name="continentie_defecatiepatroon" Grid.Row="8" Grid.Column="2" Margin="8,5.5,0,9.5"
+                         HorizontalAlignment="Left" Width="317" />
+                <TextBox x:Name="defecatiepatroon" Grid.Row="7" VerticalAlignment="Top" Height="38" Grid.Column="2"
+                         Margin="8,0.5,0,0" HorizontalAlignment="Left" Width="310" />
+                <Button Content="Opslaan" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="10"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+                <Label Grid.Row="5" Content="Laxantia:" Margin="33,11,10,10" Grid.Column="3" />
+                <TextBox x:Name="laxantia" Grid.Row="5" Grid.Column="4" Margin="10,2,46,11" />
+                <Label Grid.Row="6" Content="Transpiratie:" Margin="33,10,10,11" Grid.Column="3"
+                       RenderTransformOrigin="0.446,0.75" />
+                <Label Grid.Row="7" Content="Sputum:" Margin="33,8,10,13" Grid.Column="3"
+                       RenderTransformOrigin="0.05,0.571" />
+                <Separator Grid.Column="2" HorizontalAlignment="Left" Height="10" Margin="159,2,0,0" Grid.Row="7"
+                           VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="90" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+                <TextBox x:Name="transpiratie" Grid.Row="6" Grid.Column="4" Margin="10,6,46,7" />
+                <TextBox x:Name="sputum" Grid.Row="6" Grid.Column="4" Margin="10,47,46,13" Grid.RowSpan="2" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31" />
+                    <ColumnDefinition Width="162" />
+                    <ColumnDefinition Width="328*" />
+                    <ColumnDefinition Width="225*" />
+
+
+                    <ColumnDefinition Width="395*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="3" Margin="12,11,0,10" Content="Lichaamsbeweging:" Grid.Column="1" />
+                <Label Grid.Row="4" Content="Vrijetijdsbesteding::" Margin="12,9,0,10" Grid.Column="1" />
+                <Label Grid.Row="5" Content="Energie:" Margin="12,10,0,9" Grid.Column="1" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Width="597"
+                           FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Grid.ColumnSpan="3"
+                           Grid.Column="1" Margin="10,0,0,13" FontWeight="Bold">
+                    <Run Text="4" /><Run Text=" " /><Run Text="Activiteitenpatroon" />
+                </TextBlock>
+                <Label Grid.Row="6" Content="Functiebeperkingen:" Margin="12,11,0,10" Grid.Column="1" />
+                <TextBox x:Name="gebruik_hulpmiddelen" Grid.Row="7" Grid.Column="2" Margin="0,10,1,5" />
+                <TextBox x:Name="functiebeperkingen" Grid.Row="6" VerticalAlignment="Top" Height="38" Grid.Column="2" />
+                <Label Grid.Row="7" Content="Gebruik &#xD;&#xA;hulpmiddelen::" Margin="12,10,313,39" Grid.Column="1"
+                       Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                <TextBox x:Name="nagelverzorging" Grid.Row="5" Grid.Column="4" Margin="0,2,85,13" />
+                <Label Grid.Row="8" Content="Aankleden:" Margin="12,21,313,0" Grid.Column="1"
+                       RenderTransformOrigin="0.446,0.75" Grid.ColumnSpan="2" />
+                <Separator Grid.Column="2" HorizontalAlignment="Left" Height="6" Margin="77,22,0,0" Grid.Row="7"
+                           VerticalAlignment="Top" Width="426" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="90" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+                <TextBox x:Name="aankleden" Grid.Row="8" Grid.Column="2" Margin="0,10,0,1" />
+                <Label Grid.Row="3" Margin="58,11,0,10" Content="Wassen:" Grid.Column="3" />
+                <Label Grid.Row="4" Margin="58,11,0,10" Content="Haarverzorging:" Grid.Column="3"
+                       RenderTransformOrigin="0.493,0.5" />
+                <Label Grid.Row="5" Margin="58,10,0,11" Content="Nagelverzorging:" Grid.Column="3" />
+                <Label Grid.Row="6" Margin="58,11,0,10" Content="Gebitsverzorging:" Grid.Column="3" />
+                <Label Grid.Row="7" Margin="58,11,0,10" Content="Scheren:" Grid.Column="3" />
+                <Label Grid.Row="8" Margin="58,11,0,10" Content="Huidverzorging:" Grid.Column="3" />
+                <TextBox x:Name="wassen" Grid.Row="3" Grid.Column="4" Margin="0,5,85,10" HorizontalAlignment="Right"
+                         Width="310" />
+                <TextBox x:Name="haarverzorging" Grid.Row="4" Grid.Column="4" Margin="0,9,85,6"
+                         HorizontalAlignment="Right" Width="305" />
+                <TextBox x:Name="scheren" Grid.Row="7" Grid.Column="4" Margin="0,10,85,5" HorizontalAlignment="Right"
+                         Width="310" />
+                <TextBox x:Name="huidverzorging" Grid.Row="8" Grid.Column="4" Margin="0,5,85,10"
+                         HorizontalAlignment="Right" Width="310" />
+                <TextBox x:Name="gebitsverzorging" Grid.Row="6" Grid.Column="4" Margin="0,10,85,5"
+                         HorizontalAlignment="Right" Width="310" />
+                <TextBox x:Name="energie" Grid.Row="5" Grid.Column="2" Margin="0,4,0,9" />
+                <TextBox x:Name="vrijetijdsbesteding" Grid.Row="4" Grid.Column="2" Margin="0,7,0,6" />
+                <TextBox x:Name="lichaamsbeweging" Grid.Row="3" Grid.Column="2" Margin="10,0,215,13"
+                         Grid.ColumnSpan="2" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31" />
+                    <ColumnDefinition Width="162" />
+                    <ColumnDefinition Width="328*" />
+                    <ColumnDefinition Width="225*" />
+
+
+                    <ColumnDefinition Width="395*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="3" Margin="12,11,0,10" Content="Make-up en sieraden:" Grid.Column="1" />
+                <TextBox x:Name="makeup_sieraden" Grid.Row="3" Grid.Column="2" Margin="5,5,0,8"
+                         HorizontalAlignment="Left" Width="317" />
+                <Label Grid.Row="4" Content="Hulp bij in/uit bed:" Margin="12,9,0,10" Grid.Column="1" />
+                <Label Grid.Row="5" Content="Hulp bij wassen:" Margin="12,10,0,9" Grid.Column="1" />
+                <Label Grid.Row="6" Content="Hulp bij houding in&#xD;&#xA;bed/stoel:" Margin="12,11,0,44"
+                       Grid.Column="1" Grid.RowSpan="2" />
+                <TextBox x:Name="hulp_houding_bedstoel" Grid.Row="6" VerticalAlignment="Top" Height="38"
+                         Grid.Column="2" />
+                <Button Content="Opslaan" Grid.Column="1" HorizontalAlignment="Left" Margin="12,0,0,0" Grid.Row="11"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+                <Label Grid.Row="7" Content="Gebruik &#xA;hulpmiddelen::" Margin="12,10,313,39" Grid.Column="1"
+                       Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                <TextBox x:Name="hulp_medicatie" Grid.Row="5" Grid.Column="4" Margin="5,10,85,5" />
+                <Label Grid.Row="8" Content="Hulp bij aan-/uitkleden:" Margin="12,21,313,0" Grid.Column="1"
+                       RenderTransformOrigin="0.446,0.75" Grid.ColumnSpan="2" />
+                <Label Grid.Row="9" Content="Hulp bij lopen:" Margin="12,21,313,0" Grid.Column="1"
+                       RenderTransformOrigin="0.05,0.571" Grid.ColumnSpan="2" />
+                <Separator Grid.Column="2" HorizontalAlignment="Left" Height="6" Margin="77,22,0,0" Grid.Row="7"
+                           VerticalAlignment="Top" Width="426" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="90" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+                <TextBox x:Name="hulp_lopen" Grid.Row="9" Grid.Column="2" Margin="0,8,0,0" />
+                <TextBox x:Name="hulp_aan_uitkleden" Grid.Row="8" Grid.Column="2" Margin="0,10,0,1" />
+                <Label Grid.Row="3" Margin="58,11,0,10" Content="Hulp bij eten:" Grid.Column="3" />
+                <Label Grid.Row="4" Margin="58,11,0,10" Content="Hulp bij toiletgang:" Grid.Column="3"
+                       RenderTransformOrigin="0.493,0.5" />
+                <Label Grid.Row="5" Margin="58,16,0,5" Content="Hulp bij medicatie:" Grid.Column="3" />
+                <Label Grid.Row="6" Margin="58,17,0,4" Content="Mobiliteit:" Grid.Column="3" />
+                <TextBox x:Name="hulp_eten" Grid.Row="3" Grid.Column="4" Margin="0,5,85,10" HorizontalAlignment="Right"
+                         Width="305" />
+                <TextBox x:Name="hulp_toiletgang" Grid.Row="4" Grid.Column="4" Margin="0,9,85,6"
+                         HorizontalAlignment="Right" Width="305" />
+                <TextBox x:Name="mobiliteit" Grid.Row="6" Grid.Column="4" Margin="0,11,85,4"
+                         HorizontalAlignment="Right" Width="305" />
+                <TextBox x:Name="hulp_wassen" Grid.Row="5" Grid.Column="2" Margin="0,4,0,9" />
+                <TextBox x:Name="hulp_bed" Grid.Row="4" Grid.Column="2" Margin="0,7,0,6" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition Width="278" />
+                    <ColumnDefinition Width="473*" />
+                    <ColumnDefinition Width="343*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="3" Margin="10,11,2,10" Content="Slaap- en rustpatroon:" Grid.Column="1" />
+                <TextBox x:Name="slaap_rustpatroon" Grid.Row="3" Grid.Column="2" Margin="8,3,2.5,10" />
+                <Label Grid.Row="4" Content="Slaapgewoonten:" Margin="10,10,10,9" Grid.Column="1" />
+                <TextBox x:Name="slaapgewoonten" Grid.Row="4" Grid.Column="2" Margin="8,0,2.5,11" />
+                <Label Grid.Row="5" Content="Slaapmedicatie:" Margin="10,9,2,10" Grid.Column="1" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold" Text="5 Slaap- en rustpatroon"
+                           Margin="10,3,0,0" />
+                <TextBox x:Name="slaapmedicatie" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top"
+                         Height="38" Width="462" Grid.Column="2" Margin="8,1,0,0" />
+                <Button Content="Opslaan" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="7"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition Width="230" />
+                    <ColumnDefinition Width="521*" />
+                    <ColumnDefinition Width="343*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="4" Margin="12,12,0,9" Content="Horen:" Grid.Column="1" />
+                <TextBox x:Name="horen" Grid.Row="4" Grid.Column="2" Margin="8,4,2.5,9" />
+                <Label Grid.Row="5" Content="Zien:" Margin="11,19,9,0" Grid.Column="1" />
+                <TextBox x:Name="zien" Grid.Row="5" Grid.Column="2" Margin="8,1,2.5,10" />
+                <Label Grid.Row="6" Content="Geheugen:" Margin="10,10,2,9" Grid.Column="1" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"
+                           Text="6 Cognitie- en waarnemingspatroon" Margin="10,26,0,0" Grid.RowSpan="2" />
+                <TextBox x:Name="geheugen" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Height="38"
+                         Width="462" Grid.Column="2" Margin="8,2,0,0" />
+                <Button Content="Opslaan" Grid.Column="1" HorizontalAlignment="Left" Margin="10,48,0,0" Grid.Row="11"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+                <Label Grid.Row="7" Content="Concentratie:" Margin="11,18,2,1" Grid.Column="1" />
+                <TextBox x:Name="concentratie" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top"
+                         Height="38" Width="462" Grid.Column="2" Margin="10,10,0,0" />
+                <Label Grid.Row="8" Content="Aanleren nieuwe dingen:" Margin="10,19,3,0" Grid.Column="1" />
+                <TextBox x:Name="aanleren_nieuwe_dingen" HorizontalAlignment="Left" Grid.Row="8"
+                         VerticalAlignment="Top" Height="38" Width="462" Grid.Column="2" Margin="10,11,0,0" />
+                <Label Grid.Row="9" Content="Pijn:" Margin="10,21,3,47" Grid.Column="1" Grid.RowSpan="2" />
+                <TextBox x:Name="pijn" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Top" Height="38"
+                         Width="462" Grid.Column="2" Margin="10,13,0,0" Grid.RowSpan="2" />
+                <Label Grid.Row="10" Content="Communicatie:" Margin="10,19,3,0" Grid.Column="1" />
+                <TextBox x:Name="communicatie" HorizontalAlignment="Left" Grid.Row="10" VerticalAlignment="Top"
+                         Height="38" Width="462" Grid.Column="2" Margin="10,11,0,0" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="52" />
+                    <ColumnDefinition Width="236" />
+                    <ColumnDefinition Width="73*" />
+                    <ColumnDefinition Width="49*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="4" Margin="12,12,0,9" Content="Persoonsomschrijving:" Grid.Column="1" />
+                <TextBox x:Name="persoonsomschrijving" Grid.Row="4" Grid.Column="2" Margin="8,4,2.5,9" />
+                <Label Grid.Row="5" Content="Mentale toestand:" Margin="11,19,9,0" Grid.Column="1" />
+                <TextBox x:Name="mentale_toestand" Grid.Row="5" Grid.Column="2" Margin="8,1,2.5,10" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold" Text="7 Zelfbelevingspatroon"
+                           Margin="10,26,0,0" Grid.RowSpan="2" />
+                <Button Content="Opslaan" Grid.Column="1" HorizontalAlignment="Left" Margin="12,10,0,0" Grid.Row="7"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="54" />
+                    <ColumnDefinition Width="244" />
+                    <ColumnDefinition Width="501*" />
+                    <ColumnDefinition Width="343*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="4" Margin="12,12,0,9" Content="Alleenstaand/relatie/familie:" Grid.Column="1" />
+                <TextBox x:Name="alleenstaand_relatie_familie" Grid.Row="4" Grid.Column="2" Margin="8,4,2.5,9" />
+                <Label Grid.Row="5" Content="Consequenties voor thuissituatie:" Margin="11,19,9,0" Grid.Column="1" />
+                <TextBox x:Name="gegevens_bezoek" Grid.Row="6" Grid.Column="2" Margin="8,11,2.5,0" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold" Text="8 Rollen- en relatiepatroon"
+                           Margin="10,26,0,0" Grid.RowSpan="2" />
+                <Button Content="Opslaan" Grid.Column="1" HorizontalAlignment="Left" Margin="12,34,0,0" Grid.Row="7"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+                <Label Grid.Row="6" Content="Gegevens over bezoek:" Margin="10,19,10,0" Grid.Column="1" />
+                <TextBox x:Name="consequenties_thuissituatie" Grid.Row="5" Grid.Column="2" Margin="8,1,2.5,10" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="212" />
+                    <ColumnDefinition Width="537*" />
+                    <ColumnDefinition Width="343*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="4" Margin="12,12,0,9" Content="Indien relevant:" Grid.Column="1" />
+                <TextBox x:Name="indien_relevant" Grid.Row="4" Grid.Column="2" Margin="8,4,2.5,9" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"
+                           Text="9 Seksualiteits- en voortplantingspatroon" Margin="10,26,0,0" Grid.RowSpan="2" />
+                <Button Content="Opslaan" Grid.Column="1" HorizontalAlignment="Left" Margin="12,10,0,0" Grid.Row="6"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="52" />
+                    <ColumnDefinition Width="280" />
+                    <ColumnDefinition Width="467*" />
+                    <ColumnDefinition Width="343*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="4" Margin="12,12,0,9" Content="Grote veranderingen in persoonlijk leven:"
+                       Grid.Column="1" />
+                <TextBox x:Name="grote_veranderingen_persoonlijk_leven" Grid.Row="4" Grid.Column="2"
+                         Margin="8,10,2.5,3" />
+                <Label Grid.Row="5" Content="Gesprekspartner:" Margin="11,19,9,0" Grid.Column="1" />
+                <TextBox x:Name="manier_problemen_lijf_gaan" Grid.Row="6" Grid.Column="2" Margin="8,11,2.5,0" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold" Text="10 Stressverwerkingspatroon"
+                           Margin="10,26,0,0" Grid.RowSpan="2" />
+                <Button Content="Opslaan" Grid.Column="1" HorizontalAlignment="Left" Margin="12,34,0,0" Grid.Row="7"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+                <Label Grid.Row="6" Content="Manier van problemen te lijf gaan:" Margin="10,19,10,0" Grid.Column="1" />
+                <TextBox x:Name="gesprekspartner" Grid.Row="5" Grid.Column="2" Margin="0,10,10.5,1" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="250" />
+                    <ColumnDefinition Width="499*" />
+                    <ColumnDefinition Width="343*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="4" Margin="12,12,0,9" Content="Consequenties levensbeschouwing:" Grid.Column="1" />
+                <TextBox x:Name="consequenties_levensbeschouwing" Grid.Row="4" Grid.Column="2" Margin="10,4,0.5,9" />
+                <Label Grid.Row="5" Content="Consequenties culturele gebruiken:" Margin="11,19,9,0" Grid.Column="1" />
+                <TextBox x:Name="toekomstperspectief" Grid.Row="6" Grid.Column="2" Margin="10,10,0.5,1" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"
+                           Text="11 Waarden- en levensovertuigingenpatroon" Margin="10,26,0,0" Grid.RowSpan="2" />
+                <Button Content="Opslaan" Grid.Column="1" HorizontalAlignment="Left" Margin="12,34,0,0" Grid.Row="7"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+                <Label Grid.Row="6" Content="Toekomstperspectief:" Margin="10,19,10,0" Grid.Column="1" />
+                <TextBox x:Name="consequenties_culturele_gebruiken" Grid.Row="5" Grid.Column="2" Margin="10,10,0.5,1" />
+
+            </Grid>
+            <Grid Margin="10" Background="#dcecf0" Height="612">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="250" />
+                    <ColumnDefinition Width="499*" />
+                    <ColumnDefinition Width="343*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="75*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="4" Margin="12,12,0,9" Content="Nog te bespreken:" Grid.Column="1" />
+                <TextBox x:Name="nog_te_bespreken" Grid.Row="4" Grid.Column="2" Margin="10,4,0.5,9" />
+                <Label Grid.Row="8" Content="Vragen:" Margin="10,34" Grid.Column="1" Grid.RowSpan="2" />
+                <TextBlock HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"
+                           Width="597" FontFamily="Microsoft YaHei" FontSize="22" Foreground="#FF37AAC8" Height="36"
+                           Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold" Text="12 Overige" Margin="10,26,0,0"
+                           Grid.RowSpan="2" />
+                <Button Content="Opslaan" Grid.Column="1" HorizontalAlignment="Left" Margin="12,37,0,0" Grid.Row="11"
+                        VerticalAlignment="Top" Width="175" Height="54" Grid.RowSpan="2" />
+                <TextBox x:Name="vragen" Height="200" TextWrapping="Wrap" AcceptsReturn="True"
+                         HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Column="2"
+                         Margin="10,11,0.5,34" Grid.Row="5" Grid.RowSpan="5" />
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

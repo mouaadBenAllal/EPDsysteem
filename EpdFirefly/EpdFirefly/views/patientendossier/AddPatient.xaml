@@ -1,0 +1,96 @@
+﻿<Window x:Class="EpdFirefly.Views.Patientendossier.AddPatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="AddPatient" Height="600" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Background="#2e3137">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,0,0,0">
+
+        <Border Margin="0,14" Background="#dcecf0" CornerRadius="5" Grid.RowSpan="2" Width="441" Height="auto">
+            <StackPanel x:Name="Stackpanelpatients">
+                <Grid>
+                    <Button Name="backbtn"  Content="Terug" Margin="10,11,360,-11"/>
+                </Grid>
+                <TextBlock HorizontalAlignment="Center" FontSize="20">Patient</TextBlock>
+                <Separator Foreground="White" Height="2" Margin="0,15,0,5" />
+                <Label Content="Voornaam" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="naam" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <Label Content="Achternaam" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="achternaam" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <Label Content="Plaats" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="woonplaats" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <Label Content="Postcode" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="postcode" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <Label Content="Straatnaam" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="straatnaam" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <Label Content="Huisnummer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="huisnummer" PreviewTextInput="TextBox1_PreviewTextInput" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <Label Content="Telefoon" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="telefoon_nummer" PreviewTextInput="TextBox1_PreviewTextInput" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <TextBlock HorizontalAlignment="Center" FontSize="20">Contact Persoon</TextBlock>
+                <Separator Foreground="White" Height="2" Margin="0,15,0,5" />
+                <Label Content="Voornaam" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="contact_naam" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <Label Content="Achternaam" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="contact_achternaam" Height="23" TextWrapping="Wrap" Text="" Width="200"
+                         Margin="178,1,0,3" HorizontalAlignment="Left" />
+                <Label Content="Plaats" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="contact_woonplaats" Height="23" TextWrapping="Wrap" Text="" Width="200"
+                         Margin="178,1,0,3" HorizontalAlignment="Left" />
+                <Label Content="Postcode" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="contact_postcode" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <Label Content="Straatnaam" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="contact_straatnaam" Height="23" TextWrapping="Wrap" Text="" Width="200"
+                         Margin="178,1,0,3" HorizontalAlignment="Left" />
+                <Label Content="Huisnummer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="contact_huisnummer" PreviewTextInput="TextBox1_PreviewTextInput" Height="23" TextWrapping="Wrap" Text="" Width="200"
+                         Margin="178,1,0,3" HorizontalAlignment="Left" />
+                <Label Content="Telefoon" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,11,0,-30"
+                       RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="contact_telefoon" PreviewTextInput="TextBox1_PreviewTextInput" Height="23" TextWrapping="Wrap" Text="" Width="200" Margin="178,1,0,3"
+                         HorizontalAlignment="Left" />
+                <TextBlock HorizontalAlignment="Center" FontSize="20">Behandelaar</TextBlock>
+                <Separator Foreground="White" Height="2" Margin="0,15,0,5" />
+                <Label Content="Naam Behandelaar" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Margin="0,11,0,-30" RenderTransformOrigin="0.499,1.598" />
+                <TextBox Name="behandelende_arts" Height="23" TextWrapping="Wrap" Text="" Width="200"
+                         Margin="178,1,0,3" HorizontalAlignment="Left" />
+                <TextBlock HorizontalAlignment="Center" FontSize="20" Margin="0,30,0,0">Reanimatiebeleid</TextBlock>
+                <Separator Height="2" Margin="0,15,0,5" />
+                <TextBox Height="Auto" TextWrapping="Wrap" Name="reanimatiebeleid" Margin="0,20,0,0" Width="400"
+                         AcceptsTab="True" AcceptsReturn="True" />
+                <TextBlock HorizontalAlignment="Center" FontSize="20" Margin="0,30,0,0">Allergieen</TextBlock>
+                <Separator Height="2" Margin="0,15,0,5" />
+                <TextBox Name="allergieen" TextWrapping="Wrap" Margin="0,20,0,30" Width="400" AcceptsTab="True"
+                         Height="Auto" AcceptsReturn="True" />
+                <Separator Height="2" Margin="0,15,0,10" />
+                <Button Height="50" Width="300" Foreground="White" Content="Opslaan" Margin="0,0,0,35" Name="opslaan" />
+            </StackPanel>
+        </Border>
+    </ScrollViewer>
+</Window>
