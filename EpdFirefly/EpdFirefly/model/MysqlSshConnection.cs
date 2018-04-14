@@ -18,8 +18,8 @@ namespace DatabaseHandler
         /// connection con
         /// </summary>
         public MySqlConnection Con;
-        private static readonly PrivateKeyFile Test = new PrivateKeyFile(@"open");
-        private static readonly SshClient Client = new SshClient("188.166.101.250", "root", Test);
+        private static readonly PrivateKeyFile sshKey = new PrivateKeyFile(@"open");
+        private static readonly SshClient Client = new SshClient("188.166.101.250", "root", sshKey);
 
         private static QueryBuilder queryBuilder;
         /// <summary>

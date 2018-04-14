@@ -3,8 +3,10 @@
  *Author            : Team firefly
 */
 
+
 namespace EpdFirefly.Controller.Users
 {
+    using EpdFirefly.model;
     using System.Collections.Generic;
     using System.Data;
     using System.Windows.Controls;

@@ -84,6 +84,7 @@
     <Compile Include="controller\users\PagesNavigationController.cs" />
     <Compile Include="controller\users\RegisterController.cs" />
     <Compile Include="model\Container.cs" />
+    <Compile Include="model\NavigationContainer.cs" />
     <Compile Include="views\anamnese\AnamneseCreate.xaml.cs">
       <DependentUpon>AnamneseCreate.xaml</DependentUpon>
     </Compile>
@@ -231,9 +232,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\Image3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="EPD_logotype_basic_cmyk_byline.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,7 +1,9 @@
-﻿/*
+/*
  *Application name  : Elektronische patientendossier
  *Author            : Team firefly
 */
+
+
 namespace EpdFirefly
 {
     using System;
@@ -13,20 +15,13 @@ namespace EpdFirefly
     using Controller.Patientendossier;
     using DatabaseHandler;
     using MySql.Data.MySqlClient;
+    using EpdFirefly.model;
     using Views.Users;
+
     internal class LoginController
     {
         private readonly MainWindow login;
         private string userId = "";
-
-        /// <summary>
-        ///     constructor for login controller
-        /// </summary>
-        /// <param name="login"></param>
-        public LoginController(MainWindow login)
-        {
-            this.login = login;
-        }
 
         /// <summary>
         ///     handles login
@@ -44,16 +39,17 @@ namespace EpdFirefly
                     {
                         MessageBox.Show("Success");
                         Container.GetInstance.Set("userId", userId);
-                        Home home = new Home();
-                        login.Close();
-                        home.ShowDialog();
+                        NavigationContainer.GetInstance.Set("home", new Home());
+                        ((MainWindow)NavigationContainer.GetInstance.Get("login")).Close();
+                        ((Home)NavigationContainer.GetInstance.Get("home")).ShowDialog();
+
                     }
 
                     break;
                 case "register":
-                    Register register = new Register();
-                    login.Close();
-                    register.Show();
+                    NavigationContainer.GetInstance.Set("register", new Register());
+                    ((MainWindow)NavigationContainer.GetInstance.Get("login")).Close();
+                    ((Register)NavigationContainer.GetInstance.Get("register")).Show();
                     break;
             }
         }
